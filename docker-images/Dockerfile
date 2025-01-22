@@ -1,10 +1,10 @@
 FROM debian:latest
 
-RUN apt update && apt install apache2 -y 
+RUN apt update && apt install apache2 -y
+ 
+COPY ./beryllium /var/www/html
 
-EXPOSE 80 
-
-CMD ["apachectl", "-D", "FOREGROUNG"]
+CMD ["apachectl", "-D", "FOREGROUND"]
 
 
 
